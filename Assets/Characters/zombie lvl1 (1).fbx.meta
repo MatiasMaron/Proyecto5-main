@@ -1,0 +1,342 @@
+fileFormatVersion: 2
+guid: db6e9f6473d8b6e49a65c972959c78df
+ModelImporter:
+  serializedVersion: 23
+  fileIDToRecycleName:
+    100000: Armature
+    100002: cabeza
+    100004: cabeza_end
+    100006: cododer
+    100008: codoizq
+    100010: cuerpo
+    100012: hombroder
+    100014: hombroizq
+    100016: manoder
+    100018: manoder_end
+    100020: manoizq
+    100022: manoizq_end
+    100024: pieder
+    100026: pieder_end
+    100028: pieizq
+    100030: pieizq_end
+    100032: piernader
+    100034: piernaizq
+    100036: rodillader
+    100038: rodillaizq
+    100040: Root
+    100042: //RootNode
+    400000: Armature
+    400002: cabeza
+    400004: cabeza_end
+    400006: cododer
+    400008: codoizq
+    400010: cuerpo
+    400012: hombroder
+    400014: hombroizq
+    400016: manoder
+    400018: manoder_end
+    400020: manoizq
+    400022: manoizq_end
+    400024: pieder
+    400026: pieder_end
+    400028: pieizq
+    400030: pieizq_end
+    400032: piernader
+    400034: piernaizq
+    400036: rodillader
+    400038: rodillaizq
+    400040: Root
+    400042: //RootNode
+    2100000: Material.001
+    4300000: cuerpo
+    7400000: Armature|ArmatureAction
+    9500000: //RootNode
+    13700000: cuerpo
+    2186277476908879412: ImportLogs
+  externalObjects:
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: Material.001
+    second: {fileID: 2100000, guid: 448ab6235627937488acfd94f6a5c869, type: 2}
+  - first:
+      type: UnityEngine:Texture2D
+      assembly: UnityEngine.CoreModule
+      name: lH8yTHvm (1)
+    second: {fileID: 2800000, guid: fcc72232878689a4cabf28db78704a3c, type: 3}
+  materials:
+    importMaterials: 1
+    materialName: 0
+    materialSearch: 1
+    materialLocation: 1
+  animations:
+    legacyGenerateAnimations: 4
+    bakeSimulation: 0
+    resampleCurves: 1
+    optimizeGameObjects: 0
+    motionNodeName: 
+    rigImportErrors: "Invalid Avatar Rig Configuration. Missing or invalid transform:\n\tRequired
+      human bone 'Head' not found\n"
+    rigImportWarnings: 
+    animationImportErrors: 
+    animationImportWarnings: 
+    animationRetargetingWarnings: 
+    animationDoRetargetingWarnings: 0
+    importAnimatedCustomProperties: 0
+    importConstraints: 0
+    animationCompression: 3
+    animationRotationError: 0.5
+    animationPositionError: 0.5
+    animationScaleError: 0.5
+    animationWrapMode: 0
+    extraExposedTransformPaths: []
+    extraUserProperties: []
+    clipAnimations: []
+    isReadable: 1
+  meshes:
+    lODScreenPercentages: []
+    globalScale: 1
+    meshCompression: 0
+    addColliders: 0
+    useSRGBMaterialColor: 1
+    importVisibility: 1
+    importBlendShapes: 1
+    importCameras: 1
+    importLights: 1
+    swapUVChannels: 0
+    generateSecondaryUV: 0
+    useFileUnits: 1
+    optimizeMeshForGPU: 1
+    keepQuads: 0
+    weldVertices: 1
+    preserveHierarchy: 0
+    indexFormat: 0
+    secondaryUVAngleDistortion: 8
+    secondaryUVAreaDistortion: 15.000001
+    secondaryUVHardAngle: 88
+    secondaryUVPackMargin: 4
+    useFileScale: 1
+    previousCalculatedGlobalScale: 0.01
+    hasPreviousCalculatedGlobalScale: 1
+  tangentSpace:
+    normalSmoothAngle: 60
+    normalImportMode: 0
+    tangentImportMode: 3
+    normalCalculationMode: 4
+    legacyComputeAllNormalsFromSmoothingGroupsWhenMeshHasBlendShapes: 0
+    blendShapeNormalImportMode: 1
+    normalSmoothingSource: 0
+  importAnimation: 1
+  copyAvatar: 0
+  humanDescription:
+    serializedVersion: 2
+    human:
+    - boneName: Root
+      humanName: Hips
+      limit:
+        min: {x: 0, y: 0, z: 0}
+        max: {x: 0, y: 0, z: 0}
+        value: {x: 0, y: 0, z: 0}
+        length: 0
+        modified: 0
+    - boneName: piernader
+      humanName: LeftUpperLeg
+      limit:
+        min: {x: 0, y: 0, z: 0}
+        max: {x: 0, y: 0, z: 0}
+        value: {x: 0, y: 0, z: 0}
+        length: 0
+        modified: 0
+    - boneName: piernaizq
+      humanName: RightUpperLeg
+      limit:
+        min: {x: 0, y: 0, z: 0}
+        max: {x: 0, y: 0, z: 0}
+        value: {x: 0, y: 0, z: 0}
+        length: 0
+        modified: 0
+    - boneName: rodillader
+      humanName: LeftLowerLeg
+      limit:
+        min: {x: 0, y: 0, z: 0}
+        max: {x: 0, y: 0, z: 0}
+        value: {x: 0, y: 0, z: 0}
+        length: 0
+        modified: 0
+    - boneName: rodillaizq
+      humanName: RightLowerLeg
+      limit:
+        min: {x: 0, y: 0, z: 0}
+        max: {x: 0, y: 0, z: 0}
+        value: {x: 0, y: 0, z: 0}
+        length: 0
+        modified: 0
+    - boneName: pieder
+      humanName: LeftFoot
+      limit:
+        min: {x: 0, y: 0, z: 0}
+        max: {x: 0, y: 0, z: 0}
+        value: {x: 0, y: 0, z: 0}
+        length: 0
+        modified: 0
+    - boneName: pieizq
+      humanName: RightFoot
+      limit:
+        min: {x: 0, y: 0, z: 0}
+        max: {x: 0, y: 0, z: 0}
+        value: {x: 0, y: 0, z: 0}
+        length: 0
+        modified: 0
+    - boneName: hombroder
+      humanName: Spine
+      limit:
+        min: {x: 0, y: 0, z: 0}
+        max: {x: 0, y: 0, z: 0}
+        value: {x: 0, y: 0, z: 0}
+        length: 0
+        modified: 0
+    - boneName: cododer
+      humanName: LeftShoulder
+      limit:
+        min: {x: 0, y: 0, z: 0}
+        max: {x: 0, y: 0, z: 0}
+        value: {x: 0, y: 0, z: 0}
+        length: 0
+        modified: 0
+    - boneName: manoder
+      humanName: LeftUpperArm
+      limit:
+        min: {x: 0, y: 0, z: 0}
+        max: {x: 0, y: 0, z: 0}
+        value: {x: 0, y: 0, z: 0}
+        length: 0
+        modified: 0
+    skeleton:
+    - name: zombie lvl1 (1)(Clone)
+      parentName: 
+      position: {x: 0, y: 0, z: 0}
+      rotation: {x: 0, y: 0, z: 0, w: 1}
+      scale: {x: 1, y: 1, z: 1}
+    - name: Armature
+      parentName: zombie lvl1 (1)(Clone)
+      position: {x: -0.016330816, y: 2.6008983, z: 0.18951803}
+      rotation: {x: -0.7071067, y: 5.302452e-33, z: 5.302451e-33, w: 0.7071068}
+      scale: {x: 319.66232, y: 319.66232, z: 319.66232}
+    - name: Root
+      parentName: Armature
+      position: {x: 0.00005043235, y: 0, z: 0}
+      rotation: {x: 0.70710456, y: -0.0017830633, z: 0.0017830094, w: 0.70710456}
+      scale: {x: 1, y: 1, z: 1.0000001}
+    - name: cabeza
+      parentName: Root
+      position: {x: 0.000039484257, y: 0.011021686, z: -0.000000001492123}
+      rotation: {x: -0.34237444, y: -0.0022839878, z: -0.011880239, w: 0.9394857}
+      scale: {x: 1, y: 1, z: 1}
+    - name: cabeza_end
+      parentName: cabeza
+      position: {x: -0, y: 0.0036198322, z: 0}
+      rotation: {x: 0, y: -0, z: -0, w: 1}
+      scale: {x: 1, y: 1, z: 1}
+    - name: hombroder
+      parentName: Root
+      position: {x: -0.00080226123, y: 0.009699599, z: 0.000030379257}
+      rotation: {x: 0.05690487, y: -0.04599612, z: 0.91913885, w: 0.3870788}
+      scale: {x: 1.0000001, y: 0.99999994, z: 1}
+    - name: cododer
+      parentName: hombroder
+      position: {x: -1.0128133e-10, y: 0.0027434214, z: -1.8626451e-11}
+      rotation: {x: -0.0062772376, y: 0.018308735, z: 0.3564358, w: 0.93411934}
+      scale: {x: 0.99999994, y: 0.9999999, z: 0.9999998}
+    - name: manoder
+      parentName: cododer
+      position: {x: 1.0477379e-10, y: 0.003417755, z: -4.6566126e-11}
+      rotation: {x: -0.0684765, y: 0.009470321, z: 0.084375925, w: 0.9940332}
+      scale: {x: 1.0000001, y: 1.0000001, z: 1}
+    - name: manoder_end
+      parentName: manoder
+      position: {x: -0, y: 0.002458197, z: 0}
+      rotation: {x: 0, y: -0, z: -0, w: 1}
+      scale: {x: 1, y: 1, z: 1}
+    - name: hombroizq
+      parentName: Root
+      position: {x: 0.00074852706, y: 0.009684604, z: -0.0000006613864}
+      rotation: {x: -0.021400135, y: -0.06598806, z: 0.8964966, w: -0.43758595}
+      scale: {x: 1, y: 0.9999999, z: 1}
+    - name: codoizq
+      parentName: hombroizq
+      position: {x: -4.33065e-10, y: 0.0027555143, z: -6.0535965e-11}
+      rotation: {x: -0.015270933, y: -0.044022027, z: -0.42047465, w: 0.90610707}
+      scale: {x: 1, y: 1.0000001, z: 1}
+    - name: manoizq
+      parentName: codoizq
+      position: {x: 1.0244548e-10, y: 0.0035100856, z: 1.11758706e-10}
+      rotation: {x: -0.1013772, y: -0.0069663255, z: -0.061369777, w: 0.992929}
+      scale: {x: 1.0000001, y: 0.99999994, z: 1}
+    - name: manoizq_end
+      parentName: manoizq
+      position: {x: -0, y: 0.002516908, z: 0}
+      rotation: {x: 0, y: -0, z: -0, w: 1}
+      scale: {x: 1, y: 1, z: 1}
+    - name: piernader
+      parentName: Root
+      position: {x: -0.000857075, y: -0.00047095068, z: -0.0000014729776}
+      rotation: {x: 0.011448702, y: -0.07696798, z: 0.96918017, w: 0.2337407}
+      scale: {x: 0.9999984, y: 1, z: 1}
+    - name: rodillader
+      parentName: piernader
+      position: {x: -5.820766e-11, y: 0.0028175055, z: 2.3283063e-11}
+      rotation: {x: 0.11959962, y: 0.033069998, z: 0.13524666, w: 0.98301107}
+      scale: {x: 0.99999994, y: 1, z: 0.99999994}
+    - name: pieder
+      parentName: rodillader
+      position: {x: 3.0122463e-10, y: 0.002546973, z: -4.6566126e-11}
+      rotation: {x: 0.0761818, y: 0.009879537, z: -0.0007224218, w: 0.99704474}
+      scale: {x: 1, y: 1, z: 0.99999994}
+    - name: pieder_end
+      parentName: pieder
+      position: {x: -0, y: 0.002109146, z: 0}
+      rotation: {x: 0, y: -0, z: -0, w: 1}
+      scale: {x: 1, y: 1, z: 1}
+    - name: piernaizq
+      parentName: Root
+      position: {x: 0.00090922427, y: -0.00045717822, z: 0.0000014730161}
+      rotation: {x: -0.0121925045, y: -0.075395755, z: 0.9723976, w: -0.22047631}
+      scale: {x: 0.9999986, y: 0.99999994, z: 0.99999994}
+    - name: rodillaizq
+      parentName: piernaizq
+      position: {x: 1.4901161e-10, y: 0.0027773934, z: -4.1909514e-11}
+      rotation: {x: 0.12005694, y: -0.029142115, z: -0.19908385, w: 0.9721639}
+      scale: {x: 0.99999994, y: 1.0000001, z: 0.99999994}
+    - name: pieizq
+      parentName: rodillaizq
+      position: {x: 5.311449e-11, y: 0.0025928463, z: 8.2654876e-11}
+      rotation: {x: 0.06988179, y: -0.0049588326, z: -0.06865952, w: 0.9951773}
+      scale: {x: 0.99999994, y: 1, z: 1}
+    - name: pieizq_end
+      parentName: pieizq
+      position: {x: -0, y: 0.0021241906, z: 0}
+      rotation: {x: 0, y: -0, z: -0, w: 1}
+      scale: {x: 1, y: 1, z: 1}
+    - name: cuerpo
+      parentName: zombie lvl1 (1)(Clone)
+      position: {x: -0, y: 0, z: 0.20137662}
+      rotation: {x: -6.123234e-17, y: 1, z: 6.123234e-17, w: -3.7493994e-33}
+      scale: {x: 1, y: 1, z: 1}
+    armTwist: 0.5
+    foreArmTwist: 0.5
+    upperLegTwist: 0.5
+    legTwist: 0.5
+    armStretch: 0.05
+    legStretch: 0.05
+    feetSpacing: 0
+    rootMotionBoneName: 
+    hasTranslationDoF: 0
+    hasExtraRoot: 1
+    skeletonHasParents: 1
+  lastHumanDescriptionAvatarSource: {instanceID: 0}
+  animationType: 3
+  humanoidOversampling: 1
+  additionalBone: 0
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
