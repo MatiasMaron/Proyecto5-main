@@ -30,10 +30,9 @@ public class ZombieFistString : MonoBehaviour
  
     IEnumerator Esperar()
     {
-        Debug.Log("golpe zombie");
+
         hit = true;
         yield return new WaitForSeconds(1);
-        Debug.Log("paso un segundo");
         hit = false;
     }
 

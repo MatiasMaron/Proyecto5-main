@@ -35,7 +35,7 @@ public class Enemigo : MonoBehaviour
         {
             Invoke(nameof(DestroyEnemy), 0.2f);
             puntosplayerscript.SumarPuntos(50);
-			SpawnCientifico();
+			
 
         }
         else
@@ -50,6 +50,7 @@ public class Enemigo : MonoBehaviour
     {
         Destroy(gameObject);
         enemyCount++;
+        SpawnCientifico();
     }
 
     void OnTriggerEnter(Collider col)
@@ -73,6 +74,6 @@ public class Enemigo : MonoBehaviour
     }
 	void SpawnCientifico()
     {
-        var b = Instantiate(cientifico, transform.position, transform.rotation);
+     Instantiate(cientifico, transform.position, transform.rotation);
 	}
 }

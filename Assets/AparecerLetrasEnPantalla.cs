@@ -22,9 +22,9 @@ public class AparecerLetrasEnPantalla : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        if (Input.GetKeyDown(KeyCode.E) && canPress)
+        if (Input.GetMouseButtonDown(1) && canPress)
         {
-            if (puntosPlayerScript.puntos >= 1000)
+            if (puntosPlayerScript.puntos >= 500)
             {
                 SceneManager.LoadScene("Ganaste");
 
