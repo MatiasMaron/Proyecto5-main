@@ -1,12 +1,15 @@
 ﻿    using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.UI;
 using TMPro;
 
 public class VidaPlayer : MonoBehaviour
 {
     public TextMeshProUGUI vidaUI;
-    public int vida;
+    public int vidaActual;
+    public int vidaMaxima;
+    public Image barraVida;
     // Start is called before the first frame update
     void Start()
     {
@@ -16,7 +19,7 @@ public class VidaPlayer : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        vidaUI.text = vida.ToString();
+        vidaUI.text = vidaActual.ToString() + "/" + vidaMaxima.ToString();
     }
     void OnTriggerEnter(Collider col)
     {
@@ -27,8 +30,9 @@ public class VidaPlayer : MonoBehaviour
     }
     public void GetHurt()
     {
-      vida --;
-        if (vida <= 0)
+      vidaActual --;
+      barraVida.fillAmount = vidaActual / vidaMaxima;
+        if (vidaActual <= 0)
         {
             //cambio de escena
         }

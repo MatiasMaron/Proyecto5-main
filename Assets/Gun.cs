@@ -16,7 +16,7 @@ public class Gun : MonoBehaviour
     public int cargador;
     public TextMeshProUGUI balasUI;
     public float reloadTime;
-    float currReloadTime;
+    public float currReloadTime;
 
     
 
@@ -53,8 +53,6 @@ public class Gun : MonoBehaviour
             else
             {
                 Recargar();
-                
-
 
             }
         }

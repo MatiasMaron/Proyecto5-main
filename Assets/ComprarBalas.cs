@@ -9,13 +9,13 @@ public class ComprarBalas : MonoBehaviour
     [SerializeField] TextMeshProUGUI textoDelDialogo;
     bool canPress;
     public PuntosPlayer puntosPlayerScript;
-    public Gun balasDelJugador;
+    public Arma balasDelJugador;
     // Start is called before the first frame update
     void Start()
     {
         dialogueUI.SetActive(false);
         puntosPlayerScript = FindObjectOfType<PuntosPlayer>();
-        balasDelJugador = FindObjectOfType<Gun>();
+        balasDelJugador = FindObjectOfType<Arma>();
 
     }
 
@@ -27,7 +27,7 @@ public class ComprarBalas : MonoBehaviour
             if (puntosPlayerScript.puntos >= 100)
             {
                 puntosPlayerScript.puntos -= 100;
-                balasDelJugador.MaxAmo = 30;
+                balasDelJugador.municionMaxima = 30;
             }
             else
             {
