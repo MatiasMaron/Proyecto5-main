@@ -10,28 +10,43 @@ public class ComprarBalas : MonoBehaviour
     bool canPress;
     public PuntosPlayer puntosPlayerScript;
     public Arma balasDelJugador;
-    // Start is called before the first frame update
+    public PuntosPlayer txtpuntos;
+    public TextMeshProUGUI error;
+    public GameObject errorHolder;
+
     void Start()
     {
         dialogueUI.SetActive(false);
+        errorHolder.SetActive(false);
         puntosPlayerScript = FindObjectOfType<PuntosPlayer>();
         balasDelJugador = FindObjectOfType<Arma>();
-
+        txtpuntos = FindObjectOfType<PuntosPlayer>();
     }
 
-    // Update is called once per frame
+
     void Update()
     {
         if (Input.GetMouseButtonDown(1) && canPress)
         {
-            if (puntosPlayerScript.puntos >= 100)
+            if (puntosPlayerScript.puntos >= 100 && balasDelJugador.municionActual <= balasDelJugador.municionMaxima - 10)
             {
                 puntosPlayerScript.puntos -= 100;
-                balasDelJugador.municionMaxima = 30;
+                balasDelJugador.municionActual += 10;
+                txtpuntos.txtPuntos.text = puntosPlayerScript.puntos.ToString();
+            }
+            else if (puntosPlayerScript.puntos >= 100 && balasDelJugador.municionActual > balasDelJugador.municionMaxima - 10)
+            {
+                //error, sobrepasas la cantidad maxima de municion, mejora la capacidad para comprar mas
+                errorHolder.SetActive(true);
+                error.text = "Si compras sobrepasaras la cantidad máxima de munición, mejora la capacidad para comprar más";
+                Invoke("LimpiarTexto", 3f);
             }
             else
             {
-                Debug.Log("No tienes suficientes puntos");
+                //error, te faltan puntos
+                errorHolder.SetActive(true);
+                error.text = "No puedes comprar munición, te faltan puntos";
+                Invoke("LimpiarTexto", 3f);
             }
         }
     }
@@ -46,5 +61,11 @@ public class ComprarBalas : MonoBehaviour
         dialogueUI.SetActive(false);
         canPress = false;
 
+    }
+
+    void LimpiarTexto()
+    {
+        error.text = "";
+        errorHolder.SetActive(false);
     }
 }

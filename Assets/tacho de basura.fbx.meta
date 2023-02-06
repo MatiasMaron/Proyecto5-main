@@ -24,7 +24,7 @@ ModelImporter:
       type: UnityEngine:Texture2D
       assembly: UnityEngine.CoreModule
       name: paleta32
-    second: {fileID: 2800000, guid: 4790b4a3e2cda7b47b34d8f6c822dc7c, type: 3}
+    second: {fileID: 2800000, guid: c543d0362dd69b0419943d7fa936aa12, type: 3}
   materials:
     importMaterials: 1
     materialName: 0

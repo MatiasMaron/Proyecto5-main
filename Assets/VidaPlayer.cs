@@ -7,19 +7,20 @@ using TMPro;
 public class VidaPlayer : MonoBehaviour
 {
     public TextMeshProUGUI vidaUI;
-    public int vidaActual;
-    public int vidaMaxima;
+    public float vidaActual;
+    public float vidaMaxima;
     public Image barraVida;
     // Start is called before the first frame update
     void Start()
     {
-       
+        
     }
 
     // Update is called once per frame
     void Update()
     {
         vidaUI.text = vidaActual.ToString() + "/" + vidaMaxima.ToString();
+        barraVida.fillAmount = vidaActual / vidaMaxima;
     }
     void OnTriggerEnter(Collider col)
     {
@@ -28,10 +29,9 @@ public class VidaPlayer : MonoBehaviour
             
         }
     }
-    public void GetHurt()
+    public void HacerDaño()
     {
-      vidaActual --;
-      barraVida.fillAmount = vidaActual / vidaMaxima;
+      vidaActual -=5;
         if (vidaActual <= 0)
         {
             //cambio de escena

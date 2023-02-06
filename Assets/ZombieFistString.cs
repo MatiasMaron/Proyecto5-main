@@ -4,7 +4,7 @@ using UnityEngine;
 
 public class ZombieFistString : MonoBehaviour
 {
-    bool hit = false;
+    bool pegar = false;
 
     // Start is called before the first frame update
     void Start()
@@ -20,9 +20,9 @@ public class ZombieFistString : MonoBehaviour
 
     void OnTriggerEnter(Collider other)
     {
-        if (other.gameObject.name == "FPSController" && !hit)
+        if (other.gameObject.name == "FPSController" && !pegar)
         {            
-            other.gameObject.GetComponent<VidaPlayer>().GetHurt();
+            other.gameObject.GetComponent<VidaPlayer>().HacerDaño();
             StartCoroutine(Esperar());
         }
     }
@@ -31,9 +31,9 @@ public class ZombieFistString : MonoBehaviour
     IEnumerator Esperar()
     {
 
-        hit = true;
+        pegar = true;
         yield return new WaitForSeconds(1);
-        hit = false;
+        pegar = false;
     }
 
 

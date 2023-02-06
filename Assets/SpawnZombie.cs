@@ -27,7 +27,7 @@ public class SpawnZombie : MonoBehaviour
     IEnumerator TiempoentreSpawns(float time)
     {
         int instanciado = 0;
-        while ( instanciado <= 10)
+        while ( instanciado <= 9)
         {
             yield return new WaitForSecondsRealtime(time);
             Instantiate();

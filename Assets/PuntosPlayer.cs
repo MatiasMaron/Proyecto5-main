@@ -7,13 +7,13 @@ public class PuntosPlayer : MonoBehaviour
 {
     public int puntos;
     public TextMeshProUGUI txtPuntos;
-    // Start is called before the first frame update
+
     void Start()
     {
-        
+        txtPuntos.text = puntos.ToString();
     }
 
-    // Update is called once per frame
+
     void Update()
     {
         

@@ -11,8 +11,9 @@ public class Arma : MonoBehaviour
     public float enfriamiento;
     public float precision;
     float enfriamientoActual;
-    public int municionMaxima;
     public int municionActual;
+    public int municion;
+    public int municionMaxima;
     public int cargador;
     public TextMeshProUGUI balasUI;
     public GameObject nobalasUI;
@@ -20,6 +21,7 @@ public class Arma : MonoBehaviour
     public float tiempoRecargaActual;
     public Image barraRecarga;
     public GameObject barraRecargaImagen;
+
 
 
     void Start()
@@ -49,7 +51,7 @@ public class Arma : MonoBehaviour
 
         if (Input.GetMouseButton(0) && enfriamientoActual <= 0 && tiempoRecargaActual >= tiempoRecarga)
         {
-            if(municionActual > 0)
+            if(municion > 0)
             {
                 DispararYDescontarbalas();
             }
@@ -59,7 +61,7 @@ public class Arma : MonoBehaviour
             }
         }
 
-        balasUI.text = municionActual.ToString() + "/" + municionMaxima.ToString();
+        balasUI.text = municion.ToString() + "/" + municionActual.ToString();
 
         if (Input.GetKey(KeyCode.R))
         {
@@ -70,16 +72,16 @@ public class Arma : MonoBehaviour
 
     void Recargar()
     {
-        int balasgastadas = cargador - municionActual;
+        int balasgastadas = cargador - municion;
 
-        if (municionMaxima < balasgastadas)
+        if (municionActual < balasgastadas)
         {
             nobalasUI.SetActive(true);
         }
         else
         {
-            municionMaxima -= balasgastadas;
-            municionActual += balasgastadas;
+            municionActual -= balasgastadas;
+            municion += balasgastadas;
             tiempoRecargaActual = 0;
             nobalasUI.SetActive(false);
         }
@@ -90,7 +92,7 @@ public class Arma : MonoBehaviour
         var Bala = Instantiate(bala, spawnBala.position, spawnBala.rotation);
         Bala.transform.forward = Camera.main.transform.forward;
         enfriamientoActual = enfriamiento;
-        municionActual--;
+        municion--;
     }
 
 }
