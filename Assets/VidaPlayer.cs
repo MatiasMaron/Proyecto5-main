@@ -10,6 +10,7 @@ public class VidaPlayer : MonoBehaviour
     public float vidaActual;
     public float vidaMaxima;
     public Image barraVida;
+    public PantallaDaño pantalla;
     // Start is called before the first frame update
     void Start()
     {
@@ -32,6 +33,7 @@ public class VidaPlayer : MonoBehaviour
     public void HacerDaño()
     {
       vidaActual -=5;
+      pantalla.UpdateDamage(1 - (vidaActual / vidaMaxima));
         if (vidaActual <= 0)
         {
             //cambio de escena

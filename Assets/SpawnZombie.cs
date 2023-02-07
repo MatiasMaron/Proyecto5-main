@@ -8,15 +8,19 @@ public class SpawnZombie : MonoBehaviour
     public Transform[] spawnpoints;
     public float timeBetweenSpawns;
     public int randomPointIndex;
-    // Start is called before the first frame update
+    public int zombiesASpawnear;
+    public int ronda;
+    
+
     void Start()
     {
         StartCoroutine(TiempoentreSpawns(timeBetweenSpawns));
     }
 
-    // Update is called once per frame
+
     void Update()
     {
+
         
     }
     public void Instantiate()
@@ -26,12 +30,11 @@ public class SpawnZombie : MonoBehaviour
     }
     IEnumerator TiempoentreSpawns(float time)
     {
-        int instanciado = 0;
-        while ( instanciado <= 9)
+        while ( zombiesASpawnear <= 9)
         {
             yield return new WaitForSecondsRealtime(time);
             Instantiate();
-            instanciado ++;
+            zombiesASpawnear ++;
         }
     }
 }

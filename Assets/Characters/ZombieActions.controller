@@ -302,7 +302,7 @@ AnimatorState:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_Name: caminar
-  m_Speed: 1
+  m_Speed: 3
   m_CycleOffset: 0
   m_Transitions:
   - {fileID: 1101949773596494222}
@@ -360,19 +360,19 @@ AnimatorStateMachine:
   m_ChildStates:
   - serializedVersion: 1
     m_State: {fileID: 1102387029693991124}
-    m_Position: {x: 36, y: 300, z: 0}
+    m_Position: {x: 12, y: 252, z: 0}
   - serializedVersion: 1
     m_State: {fileID: 1102273854576291096}
-    m_Position: {x: 12, y: 456, z: 0}
+    m_Position: {x: 12, y: 528, z: 0}
   - serializedVersion: 1
     m_State: {fileID: 1102225230608487402}
-    m_Position: {x: 324, y: 288, z: 0}
+    m_Position: {x: 324, y: 264, z: 0}
   - serializedVersion: 1
     m_State: {fileID: 1102530933047056128}
     m_Position: {x: 324, y: 120, z: 0}
   - serializedVersion: 1
     m_State: {fileID: 1102042402052601948}
-    m_Position: {x: -288, y: 372, z: 0}
+    m_Position: {x: -192, y: 384, z: 0}
   m_ChildStateMachines: []
   m_AnyStateTransitions: []
   m_EntryTransitions: []
