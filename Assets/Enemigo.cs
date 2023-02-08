@@ -2,15 +2,16 @@
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.AI;
+using TMPro;   
 
 public class Enemigo : MonoBehaviour
 {
     public float enemyHealth = 100;
-    int enemyCount = 0;
     public NavMeshAgent agent;
     public Animator animator;
     public PuntosPlayer puntosplayerscript;
 	public GameObject cientifico;
+    public static int enemigosCurados;
 
     public bool spawneando = true;
     // Start is called before the first frame update
@@ -24,19 +25,18 @@ public class Enemigo : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        
+
     }
 
     public void TakeDamage(int damage)
     {
         enemyHealth -= damage;
 
-        if (enemyHealth <= 0)
+        if (enemyHealth == 0)
         {
             Invoke(nameof(DestroyEnemy), 0.2f);
             puntosplayerscript.SumarPuntos(50);
-			
-
+            enemigosCurados++;
         }
         else
         {
@@ -49,7 +49,6 @@ public class Enemigo : MonoBehaviour
     private void DestroyEnemy()
     {
         Destroy(gameObject);
-        enemyCount++;
         SpawnCientifico();
     }
 
