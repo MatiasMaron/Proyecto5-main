@@ -6,12 +6,15 @@ using TMPro;
 
 public class Enemigo : MonoBehaviour
 {
+    bool alreadyHit = false;
     public float enemyHealth = 100;
+    public float absolutEnemyHealth;
     public NavMeshAgent agent;
     public Animator animator;
     public PuntosPlayer puntosplayerscript;
 	public GameObject cientifico;
     public static int enemigosCurados;
+    public static int enemigosCuradosDos;
 
     public bool spawneando = true;
     // Start is called before the first frame update
@@ -31,12 +34,14 @@ public class Enemigo : MonoBehaviour
     public void TakeDamage(int damage)
     {
         enemyHealth -= damage;
-
-        if (enemyHealth == 0)
+        absolutEnemyHealth = Mathf.Clamp(enemyHealth, 0, 100);
+        if (absolutEnemyHealth == 0 && alreadyHit == false)
         {
             Invoke(nameof(DestroyEnemy), 0.2f);
             puntosplayerscript.SumarPuntos(50);
+            alreadyHit = true;
             enemigosCurados++;
+            enemigosCuradosDos++;
         }
         else
         {

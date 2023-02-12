@@ -14,12 +14,13 @@ public class SpawnZombie : MonoBehaviour
     public TextMeshProUGUI textoRondas;
     public TextMeshProUGUI enemigosCuradosText;
     public TextMeshProUGUI enemigosVivos;
-    public int ronda = 1;
+    int ronda = 1;
     
 
     void Start()
     {
         StartCoroutine(TiempoentreSpawns(timeBetweenSpawns));
+        textoRondas.text = "Ronda: " + ronda;
     }
 
     // ARREGLAR PROBLEMA DE LAS RONDAS (LA RONDA 2 ES LA 1 Y ASI SUCESIVAMENTE)
@@ -36,6 +37,11 @@ public class SpawnZombie : MonoBehaviour
           textoRondas.text = "Ronda: " + ronda;
           zombiesSpawn = 0;
           StartCoroutine(TiempoentreSpawns(timeBetweenSpawns));
+        }
+
+        if(ronda == 5)
+        {
+
         }
 
         

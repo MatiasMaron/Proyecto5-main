@@ -7,6 +7,7 @@ public class Bullet : MonoBehaviour
     public float speed;
     public float lifeTime;
     public int bulletDamage;
+    public static int dañoBala = 20;
 
     public LayerMask whatIsEnemies;
     void Start()
@@ -17,7 +18,6 @@ public class Bullet : MonoBehaviour
     private void Update()
     {
         transform.position += transform.up * speed;
-       
     }
     
     private void OnTriggerEnter(Collider collision)
@@ -25,7 +25,7 @@ public class Bullet : MonoBehaviour
         Enemigo enemigo = collision.gameObject.GetComponent<Enemigo>();
         if (enemigo)
         {
-            enemigo.TakeDamage(20);
+            enemigo.TakeDamage(dañoBala);
             Destroy(transform.parent.gameObject);
             
         }
