@@ -15,6 +15,8 @@ public class Enemigo : MonoBehaviour
 	public GameObject cientifico;
     public static int enemigosCurados;
     public static int enemigosCuradosDos;
+    public static int puntosCurado = 50;
+    public static int puntosHit = 10;
 
     public bool spawneando = true;
     // Start is called before the first frame update
@@ -28,7 +30,11 @@ public class Enemigo : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-
+        if (Input.GetKeyDown(KeyCode.L))
+        {
+            DestroyEnemy();
+            enemigosCuradosDos++;
+        }
     }
 
     public void TakeDamage(int damage)
@@ -38,7 +44,7 @@ public class Enemigo : MonoBehaviour
         if (absolutEnemyHealth == 0 && alreadyHit == false)
         {
             Invoke(nameof(DestroyEnemy), 0.2f);
-            puntosplayerscript.SumarPuntos(50);
+            puntosplayerscript.SumarPuntos(puntosCurado);
             alreadyHit = true;
             enemigosCurados++;
             enemigosCuradosDos++;
@@ -47,7 +53,7 @@ public class Enemigo : MonoBehaviour
         {
             animator.SetTrigger("Hit");
             StartCoroutine(Esperar(1    ));
-            puntosplayerscript.SumarPuntos(10);
+            puntosplayerscript.SumarPuntos(puntosHit);
         }
     }
 
@@ -76,8 +82,9 @@ public class Enemigo : MonoBehaviour
         agent.speed = 3.5f;
 
     }
-	void SpawnCientifico()
+    void SpawnCientifico()
     {
-     Instantiate(cientifico, transform.position, transform.rotation);
-	}
+        GameObject clone = Instantiate(cientifico, transform.position, transform.rotation);
+        Destroy(clone, 8f);
+    }
 }

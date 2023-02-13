@@ -9,6 +9,7 @@ public class VidaPlayer : MonoBehaviour
     public TextMeshProUGUI vidaUI;
     public float vidaActual;
     public float vidaMaxima;
+    public float regeneracion = 0.01f;
     public Image barraVida;
     public PantallaDaño pantalla;
     // Start is called before the first frame update
@@ -20,8 +21,14 @@ public class VidaPlayer : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        vidaUI.text = vidaActual.ToString() + "/" + vidaMaxima.ToString();
+        vidaActual = Mathf.Clamp(vidaActual, 0, 100);
+        vidaUI.text = ((int)vidaActual).ToString() + "/" + vidaMaxima.ToString();
         barraVida.fillAmount = vidaActual / vidaMaxima;
+
+        if(vidaActual <= vidaMaxima)
+        {
+            vidaActual += regeneracion;
+        }
     }
     void OnTriggerEnter(Collider col)
     {

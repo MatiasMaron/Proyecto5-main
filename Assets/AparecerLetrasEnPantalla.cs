@@ -24,8 +24,9 @@ public class AparecerLetrasEnPantalla : MonoBehaviour
     {
         if (Input.GetMouseButtonDown(1) && canPress)
         {
-            if (puntosPlayerScript.puntos >= 500)
+            if (puntosPlayerScript.puntos >= 1500)
             {
+                puntosPlayerScript.puntos -= 1500;
                 SceneManager.LoadScene("Ganaste");
 
             }
