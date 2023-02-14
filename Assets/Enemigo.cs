@@ -20,9 +20,10 @@ public class Enemigo : MonoBehaviour
     public AudioSource audioS;
     public AudioClip sonidoAtaque;
     public AudioClip sonidoZombie;
+    public bool pegando;
 
     public bool spawneando = true;
-    // Start is called before the first frame update
+
     void Start()
     {
         agent = GetComponent<NavMeshAgent>();
@@ -31,7 +32,7 @@ public class Enemigo : MonoBehaviour
         audioS = GetComponent<AudioSource>();
     }
 
-    // Update is called once per frame
+
     void Update()
     {
         if (Input.GetKeyDown(KeyCode.L))
@@ -39,7 +40,6 @@ public class Enemigo : MonoBehaviour
             DestroyEnemy();
             enemigosCuradosDos++;
         }
-        Invoke(nameof(SonidoZombieDelayed), 3f);
     }
 
     public void TakeDamage(int damage)
@@ -73,7 +73,13 @@ public class Enemigo : MonoBehaviour
         if (col.gameObject.name == "FPSController")
         {
             animator.SetTrigger("Pegar");
-            audioS.PlayOneShot(sonidoAtaque);
+
+            if(!pegando)
+            {
+                audioS.clip = sonidoAtaque;
+                audioS.PlayDelayed(0.2f);
+            }
+
         }
     }
 
@@ -95,5 +101,12 @@ public class Enemigo : MonoBehaviour
     void SonidoZombieDelayed()
     {
         audioS.PlayOneShot(sonidoZombie);
+        new WaitForSeconds(3);
+    }
+
+    public void SonidoAtaque()
+    {
+        audioS.clip = sonidoAtaque;
+        audioS.PlayDelayed(0.2f);
     }
 }
