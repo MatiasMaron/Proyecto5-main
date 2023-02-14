@@ -17,6 +17,9 @@ public class Enemigo : MonoBehaviour
     public static int enemigosCuradosDos;
     public static int puntosCurado = 50;
     public static int puntosHit = 10;
+    public AudioSource audioS;
+    public AudioClip sonidoAtaque;
+    public AudioClip sonidoZombie;
 
     public bool spawneando = true;
     // Start is called before the first frame update
@@ -25,6 +28,7 @@ public class Enemigo : MonoBehaviour
         agent = GetComponent<NavMeshAgent>();
         StartCoroutine(Esperar(3));
         puntosplayerscript = FindObjectOfType<PuntosPlayer>();
+        audioS = GetComponent<AudioSource>();
     }
 
     // Update is called once per frame
@@ -35,6 +39,7 @@ public class Enemigo : MonoBehaviour
             DestroyEnemy();
             enemigosCuradosDos++;
         }
+        Invoke(nameof(SonidoZombieDelayed), 3f);
     }
 
     public void TakeDamage(int damage)
@@ -67,9 +72,8 @@ public class Enemigo : MonoBehaviour
     {
         if (col.gameObject.name == "FPSController")
         {
-            
             animator.SetTrigger("Pegar");
-            
+            audioS.PlayOneShot(sonidoAtaque);
         }
     }
 
@@ -86,5 +90,10 @@ public class Enemigo : MonoBehaviour
     {
         GameObject clone = Instantiate(cientifico, transform.position, transform.rotation);
         Destroy(clone, 8f);
+    }
+
+    void SonidoZombieDelayed()
+    {
+        audioS.PlayOneShot(sonidoZombie);
     }
 }

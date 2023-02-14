@@ -21,7 +21,8 @@ public class Arma : MonoBehaviour
     public float tiempoRecargaActual;
     public Image barraRecarga;
     public GameObject barraRecargaImagen;
-
+    public AudioClip disparoJeringa;
+    AudioSource audioS;
 
 
     void Start()
@@ -29,6 +30,7 @@ public class Arma : MonoBehaviour
         nobalasUI.SetActive(false);
         enfriamientoActual = enfriamiento;
         tiempoRecargaActual = tiempoRecarga;
+        audioS = GetComponent<AudioSource>();
     }
 
     void Update()
@@ -93,6 +95,7 @@ public class Arma : MonoBehaviour
         Bala.transform.forward = Camera.main.transform.forward;
         enfriamientoActual = enfriamiento;
         municion--;
+        audioS.PlayOneShot(disparoJeringa);
     }
 
 }

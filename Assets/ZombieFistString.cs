@@ -23,7 +23,6 @@ public class ZombieFistString : MonoBehaviour
         if (other.gameObject.name == "FPSController" && !pegar)
         {            
             other.gameObject.GetComponent<VidaPlayer>().HacerDaño();
-            StartCoroutine(Esperar());
         }
     }
 

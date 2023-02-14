@@ -12,13 +12,16 @@ public class VidaPlayer : MonoBehaviour
     public float regeneracion = 0.01f;
     public Image barraVida;
     public PantallaDaño pantalla;
-    // Start is called before the first frame update
+    public AudioSource audioS;
+    public AudioClip sonidoDaño;
+
+
     void Start()
     {
-        
+        audioS = GetComponent<AudioSource>();
     }
 
-    // Update is called once per frame
+
     void Update()
     {
         vidaActual = Mathf.Clamp(vidaActual, 0, 100);
@@ -40,6 +43,7 @@ public class VidaPlayer : MonoBehaviour
     public void HacerDaño()
     {
       vidaActual -=5;
+      audioS.PlayOneShot(sonidoDaño);
       pantalla.UpdateDamage(1 - (vidaActual / vidaMaxima));
         if (vidaActual <= 0)
         {
